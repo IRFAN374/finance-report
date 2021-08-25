@@ -29,6 +29,9 @@ const useStyles = makeStyles(() => ({
 
 const SingleAlbum=({singlePhoto})=> {
     const classes = useStyles();
+    const price = Math.floor(Math.random() * 300);
+    
+   
     return (
         <Grid container spacing={1} className={classes.root}>
             <img className={classes.image} src={singlePhoto.thumbnailUrl} alt="abcd"/> 
@@ -37,7 +40,7 @@ const SingleAlbum=({singlePhoto})=> {
                <a href={singlePhoto.url}>{singlePhoto.url}</a>
             </Grid>
             <Grid className={classes.paper} >
-                <Typography variant="h4">$ 100</Typography>
+                <Typography variant="h4" style={ `${price}`>=75 ? {'color':'green'} : {'color': 'red'}}>${price}</Typography>
                 <Typography variant="body2">10:00 AM</Typography>
             </Grid>
         </Grid>
