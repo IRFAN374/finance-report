@@ -14,12 +14,13 @@ const useStyles = makeStyles(() => ({
  
   }));
 
-const Post=({album})=> {
+const Post=({album,searchValue})=> {
     const classes = useStyles();
     const photoAlbum = useSelector(state => state.posts.photoDetail);
     const userPhotoDetail = photoAlbum.filter(single=> single.albumId === album.userId);
     const photoInfos = userPhotoDetail.slice(0,10);
     // console.log("Single User Detail: ", userPhotoDetail)
+    console.log(searchValue)
     return (
         <div className={classes.root}>
             <Typography variant="h4">{album.title}</Typography>

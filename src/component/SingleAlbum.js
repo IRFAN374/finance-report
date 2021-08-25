@@ -37,7 +37,7 @@ const SingleAlbum=({singlePhoto})=> {
             <img className={classes.image} src={singlePhoto.thumbnailUrl} alt="abcd"/> 
             <Grid className={`${classes.paper} ${classes.paper2}`} >
                <Typography variant="h5">{singlePhoto.title}</Typography>
-               <a href={singlePhoto.url}>{singlePhoto.url}</a>
+               <a href={singlePhoto.url} target= "_blank" rel="noreferrer">{singlePhoto.url}</a>
             </Grid>
             <Grid className={classes.paper} >
                 <Typography variant="h4" style={ `${price}`>=75 ? {'color':'green'} : {'color': 'red'}}>${price}</Typography>
