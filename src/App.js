@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { getAlbumDetail, getPhotoDetail } from './store/actions/action'
 
-
+// changes int he code
 
 function App() {
   const dispatch = useDispatch();
